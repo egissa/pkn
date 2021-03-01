@@ -15,8 +15,8 @@ class CreateSkckTable extends Migration
     {
         Schema::create('skck', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('jabatan_id')->nullable();
+            $table->unsignedBiginteger('user_id');
+            $table->unsignedBiginteger('jabatan_id')->nullable();
             $table->string('nama');
             $table->string('kelamin');
             $table->string('kewarganegaraan');

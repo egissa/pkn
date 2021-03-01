@@ -27,12 +27,33 @@
                   <span class="menu-title">Kematian</span>
                 </a>
               </li>
+
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('user.ktp') }}">
                   <i class="mdi mdi-file-document-box menu-icon"></i>
-                  <span class="menu-title">Surat Permohonan Ktp </span>
+                  <span class="menu-title">KTP</span>
                 </a>
               </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('user.kk_baru') }}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title">KK BARU</span>
+                </a>
+              </li>
+
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('user.KKmenumpang') }}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title"> MENUMPANG KK </span>
+                </a>
+              </li>
+
+
+
+
+
             </ul>
         </div>
       </nav>

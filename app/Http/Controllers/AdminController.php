@@ -9,6 +9,9 @@ use App\Exports\SktmExport;
 use App\Exports\DomisiliExport;
 use App\Exports\KehilanganExport;
 use App\Exports\KematianExport;
+use App\Exports\KTPExport;
+use App\Exports\KKbaruExport;
+use App\Exports\KKMenumpangExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Penduduk;
 use App\User;
@@ -19,6 +22,9 @@ use App\Kematian;
 use App\Jabatan;
 use App\Sktm;
 use App\Usaha;
+use App\ktp;
+use App\Kk_baru;
+use App\Menumpangkk;
 use Auth;
 use PDF;
 
@@ -164,11 +170,31 @@ class AdminController extends Controller
         return view('pelayanan.pemerintahan.kematian', compact('kematian'));
     }
 
+    
+    public function ktp()
+    {
+        $ktp = ktp::all();
+        return view('pelayanan.pemerintahan.ktp', compact('ktp'));
+    }
+
+     public function kk_baru()
+    {
+        $kk_baru = kk_baru::all();
+        return view('pelayanan.pemerintahan.kk_baru', compact('kk_baru'));
+    }
+
+ public function Menumpangkk()
+    {
+        $Menumpangkk = Menumpangkk::all();
+        return view('pelayanan.pemerintahan.Menumpangkk', compact('Menumpangkk'));
+    }
+
+
     public function getSkck()
     {
         $skck = Skck::select('skck.*');
 
-        return \DataTables::eloquent($skck)->toJson();
+        return DataTables::eloquent($skck)->toJson();
     }
 
     public function pdfSkck($id)
@@ -206,6 +232,22 @@ class AdminController extends Controller
         return $pdf->download('Pengantar.pdf');
     }
 
+     public function pdfktp($id)
+    {
+        $ktp = ktp::find($id);
+        $pdf = PDF::loadView('print.pdf.pdfktp', ['ktp' => $ktp])->setPaper('legal');
+        return $pdf->download('pdfktp.pdf');
+    }
+
+
+     public function pdfkkbaru($id)
+    {
+        $kkbaru = Kk_baru::find($id);
+        $pdf = PDF::loadView('print.pdf.pdfkkbaru', ['ktp' => $kkbaru])->setPaper('legal');
+        return $pdf->download('pdfktp.pdf');
+    } 
+
+
     public function exportSkck()
     {
         return Excel::download(new SkckExport, 'Skck.xlsx');
@@ -225,6 +267,23 @@ class AdminController extends Controller
     {
         return Excel::download(new KematianExport, 'Kematian.xlsx');
     }
+
+ public function KtpExport()
+    {
+        return Excel::download(new KtpExport, 'ktp.xlsx');
+    }
+
+    public function KKbaruExport()
+    {
+        return Excel::download(new KKbaruExport, 'KK_baru.xlsx');
+    }
+
+     public function KKMenumpangExport()
+    {
+        return Excel::download(new KKMenumpangExport, 'KKMenumpang.xlsx');
+    }
+
+
 
     // public function edit($id)
     // {

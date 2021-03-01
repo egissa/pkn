@@ -15,8 +15,8 @@ class CreateDomisiliTable extends Migration
     {
         Schema::create('domisili', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('jabatan_id')->nullable();
+            $table->unsignedBiginteger('user_id');
+            $table->unsignedBiginteger('jabatan_id')->nullable();
             $table->string('nama');
             $table->string('kelamin');
             $table->string('tggl_lhr');
@@ -28,7 +28,7 @@ class CreateDomisiliTable extends Migration
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
-            //$table->foreign('jabatan_id')->references('id')->on('jabatan')->onDelete('cascade');
+            $table->foreign('jabatan_id')->references('id')->on('jabatan')->onDelete('cascade');
         });
     }
 

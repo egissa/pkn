@@ -13,12 +13,14 @@ class CreateKtpTable extends Migration
      */
     public function up()
     {
+        
         Schema::create('ktp', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->string('permohonan');
             $table->string('nama');
             $table->string('no_kk');
-            $table->string('nik_kk');
+            $table->string('nik_kk')->nullable();
             $table->string('alamat');
             $table->string('no_rt');
             $table->string('kode_pos');

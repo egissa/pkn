@@ -108,9 +108,8 @@ body {
                         </span>
                     @enderror
                 </br>
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Masukkan Password Anda">
-            <button type="submit" class="btn">Login</button>
+            <input type="hidden" name="password" value="user1234" placeholder="Masukkan Password Anda">
+            <button type="submit" class="btn">Cek</button>
         </form>
     </div>
 </body>

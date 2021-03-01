@@ -84,6 +84,39 @@
 			        <a href="{{ route('admin.kematian') }}" class="btn btn-primary waves-effect waves-light">Buka</a>
 			    </div>
 			</div>
+			
+
+			<div class="col-lg-4 ">
+			    <div class="card card-body text-center">
+			        <h4 class="card-title font-20 mt-0">Surat Pemohon Ktp</h4>
+			        <p class="card-text">With supporting text below as a natural lead-in to additional
+			            content.</p>
+			        <a href="{{ route('admin.ktp') }}" class="btn btn-primary waves-effect waves-light">Buka</a>
+			    </div>
+			</div>
+
+			<div class="col-lg-4 ">
+			    <div class="card card-body text-center">
+			        <h4 class="card-title font-20 mt-0">KK BARU</h4>
+			        <p class="card-text">With supporting text below as a natural lead-in to additional
+			            content.</p>
+			        <a href="{{ route('admin.kk_baru') }}" class="btn btn-primary waves-effect waves-light">Buka</a>
+			    </div>
+			</div>
+			<div class="col-lg-4 ">
+			    <div class="card card-body text-center">
+			        <h4 class="card-title font-20 mt-0">KK MENUMPANG</h4>
+			        <p class="card-text">With supporting text below as a natural lead-in to additional
+			            content.</p>
+			        <a href="{{ route('admin.Menumpangkk') }}" class="btn btn-primary waves-effect waves-light">Buka</a>
+			    </div>
+			</div>
+
+
+
+
+
+
 		</div>
 	</div>
 </div>

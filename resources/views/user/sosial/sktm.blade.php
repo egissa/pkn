@@ -82,13 +82,10 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Agama</label>
-                                    <select name="agama" class="form-control">
-                                        <option value="Islam" {{ $user->penduduk->agama == 'Islam' ? 'selected' : ''}} name="agama">Islam</option>
-                                           <option value="Kristen" {{ $user->penduduk->agama == 'Kristen' ? 'selected' : ''}} name="agama">Kristen</option>
-                                            <option value="Katolik" {{ $user->penduduk->agama == 'Katolik' ? 'selected' : ''}} name="agama">Katolik</option>
-                                            <option value="Budha" {{ $user->penduduk->agama == 'Budha' ? 'selected' : ''}} name="agama">Budha</option>
-                                           <option value="Konghucu" {{ $user->penduduk->agama == 'Konghucu' ? 'selected' : ''}} name="agama">Konghucu</option>
-                                      </select>
+                                    <input type="text" class="form-control" name="agama" value="{{ $user->penduduk->agama }}">
+                                    @if ($errors->has('nama'))
+                                    <span class="text-danger">{{ $errors->first('nama') }}</span>
+                                    @endif
                                 </div>
                             </div>
                         </div>

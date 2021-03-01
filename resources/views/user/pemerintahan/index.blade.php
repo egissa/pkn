@@ -26,13 +26,32 @@
                   <i class="mdi mdi-file-document-box menu-icon"></i>
                   <span class="menu-title">Kematian</span>
                 </a>
-              </li>
-              
+                
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('user.ktp') }}">
                   <i class="mdi mdi-file-document-box menu-icon"></i>
-                  <span class="menu-title">Surat Permohonan Ktp </span>
+                  <span class="menu-title">  KTP </span>
                 </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('user.kk_baru') }}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title">KK BARU</span>
+                </a>
+              </li>
+
+
+
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('user.KKmenumpang') }}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title"> MENUMPANG KK </span>
+                </a>
+              </li>
+
+
+
+
               </li>
             </ul>
         </div>
@@ -53,8 +72,8 @@
                         @endauth
                       @endif
             </b><br>
-              Ini dipelayanan pemerintahan anda sudah terakses di website kelurahan kuala samboja <br>
-              Semoga pelayanan ini memuaskan</label>
+               Pelayanan Pemerintahan Anda Sudah Terakses Di Website Kelurahan  Kuala Samboja <br>
+              Semoga Pelayanan ini Memuaskan</label>
           </div>
       </div>
     </div>
@@ -67,10 +86,10 @@
                       <address>
                         <p class="font-weight-bold">Kuala Samboja.</p>
                         <p>
-                          695 lsom Ave,
+                          JLN.BPP-HANDIL
                         </p>
                         <p>
-                           Suite 00
+                           Kuala Samboja
                         </p>
                         <p>
                           Kalimantan Timur

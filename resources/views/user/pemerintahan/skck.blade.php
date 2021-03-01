@@ -27,13 +27,31 @@
                   <span class="menu-title">Kematian</span>
                 </a>
               </li>
-              
-              <li class="nav-item">
+
+               <li class="nav-item">
                   <a class="nav-link" href="{{ route('user.ktp') }}">
                   <i class="mdi mdi-file-document-box menu-icon"></i>
-                  <span class="menu-title">Surat Permohonan Ktp </span>
+                  <span class="menu-title">  KTP </span>
                 </a>
               </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('user.kk_baru') }}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title">KK BARU</span>
+                </a>
+              </li>
+
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('user.KKmenumpang') }}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title"> MENUMPANG KK </span>
+                </a>
+              </li>
+
+
+
             </ul>
         </div>
       </nav>
@@ -83,12 +101,12 @@
                     <div class="form-group">
                         <label>Agama</label>
                         <select name="agama" class="form-control">
-                            <option value="Islam" {{ $user->penduduk->agama == 'Islam' ? 'selected' : ''}} name="agama">Islam</option>
-                               <option value="Kristen" {{ $user->penduduk->agama == 'Kristen' ? 'selected' : ''}} name="agama">Kristen</option>
-                                <option value="Katolik" {{ $user->penduduk->agama == 'Katolik' ? 'selected' : ''}} name="agama">Katolik</option>
-                                <option value="Budha" {{ $user->penduduk->agama == 'Budha' ? 'selected' : ''}} name="agama">Budha</option>
-                               <option value="Konghucu" {{ $user->penduduk->agama == 'Konghucu' ? 'selected' : ''}} name="agama">Konghucu</option>
-                          </select>
+      <option value="Islam" {{ $user->penduduk->agama == 'Islam' ? 'selected' : ''}} name="agama">Islam</option>
+         <option value="Kristen" {{ $user->penduduk->agama == 'Kristen' ? 'selected' : ''}} name="agama">Kristen</option>
+          <option value="Katolik" {{ $user->penduduk->agama == 'Katolik' ? 'selected' : ''}} name="agama">Katolik</option>
+          <option value="Budha" {{ $user->penduduk->agama == 'Budha' ? 'selected' : ''}} name="agama">Budha</option>
+         <option value="Konghucu" {{ $user->penduduk->agama == 'Konghucu' ? 'selected' : ''}} name="agama">Konghucu</option>
+    </select>
                     </div>
                 </div>
             </div>

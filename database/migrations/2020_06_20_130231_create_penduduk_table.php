@@ -15,21 +15,15 @@ class CreatePendudukTable extends Migration
     {
         Schema::create('penduduk', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBiginteger('user_id');
             $table->string('no_kk');
             $table->string('nik_kk');
             $table->string('nama_kk');
             $table->string('nik')->unique();
             $table->string('nama');
-            $table->string('tmpt_lhr');
-
-            $table->string('tgl_lhr');
+            $table->string('tggl_lhr');
             $table->string('nik_ibu');
-            $table->string('nama_ibu');
-            
             $table->string('nik_ayah');
-            $table->string('nama_ayah');
-            
             $table->string('kelamin');
             $table->string('umur');
             $table->string('pendidikan');

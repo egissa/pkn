@@ -5,10 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class ktp extends Model
+
 {
 	protected $table = 'ktp',
     			$fillable = [
-                    'nama','no_kk','nik_kk','alamat','no_rt','kode_pos','no_hp'
+                    'permohonan',
+                    'nama',
+                    'no_kk',
+                    'no_nik',
+                    'alamat',
+                    'no_rt',
+                    'kode_pos',
+                    'no_hp'
                     
                 ];
     public function user()
@@ -24,4 +32,5 @@ class ktp extends Model
     {
         return $this->belongsTo(Admin::class);
     }
+
 }

@@ -30,7 +30,6 @@ Route::get('beranda', function() {
 	return view('layouts.beranda.home');
 });
 
-
 Route::get('profile', function() {
 	return view('layouts.beranda.profile');
 });
@@ -52,6 +51,13 @@ Route::get('surat_kehilangan', 'KehilanganController@kehilangan')->name('user.ke
 Route::get('surat_pindah', 'PindahController@pindah')->name('user.pindah');
 Route::get('surat_kematian', 'KematianController@kematian')->name('user.kematian');
 
+Route::get('surat_ktp', 'KtpController@ktp')->name('user.ktp');
+
+Route::get('KK_baru', 'KkbaruController@kk_baru')->name('user.kk_baru');
+
+Route::get('Menumpangkk', 'MenumpangKkController@KKmenumpang')->name('user.KKmenumpang');
+//coba cari dlu itu route nya tinggal itu ajj kmu lempar route nya kmna klo udh ktmu bisa tu aku mau buat kopi dlu okokok 
+
 // Pembangunan
 Route::get('surat_usaha', 'UsahaController@usaha')->name('user.usaha');
 
@@ -69,6 +75,13 @@ Route::post('surat_skck', 'SkckController@create')->name('buat.skck');
 Route::post('surat_domisili', 'DomisiliController@create')->name('buat.domisili');
 Route::post('surat_kehilangan', 'KehilanganController@create')->name('buat.kehilangan');
 Route::post('surat_kematian', 'KematianController@create')->name('buat.kematian');
+
+Route::post('surat_ktp', 'KtpController@create')->name('buat.ktp');
+
+Route::post('KK_baru', 'KkbaruController@create')->name('buat.kk_baru');
+
+Route::post('Menumpangkk', 'MenumpangKkController@create')->	name('buat.KKmenumpang');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/logout', 'Auth\LoginController@logoutUser')->name('user.logout');
@@ -112,6 +125,26 @@ Route::group(['prefix' => 'admin'], function(){
 	Route::get('pdfDomisili/{id}', 'AdminController@pdfDomisili')->name('pdfDomisili');
 	Route::get('pdfKehilangan/{id}', 'AdminController@pdfKehilangan')->name('pdfKehilangan');
 	Route::get('pdfKematian/{id}', 'AdminController@pdfKematian')->name('pdfKematian');
+
+	Route::get('pemerintahan/ktp', 'AdminController@ktp')->name('admin.ktp');
+	Route::get('ktp', 'AdminController@ktp')->name('ktp');
+	Route::get('KtpExport', 'AdminController@KtpExport')->name('KtpExport');
+	Route::get('/pdfktp/{id}', 'AdminController@pdfktp')->name('pdfktp');
+
+
+	Route::get('pemerintahan/kk_baru', 'AdminController@kk_baru')->name('admin.kk_baru');
+	Route::get('KKbaruExport', 'AdminController@KKbaruExport')->name('KKbaruExport');
+	Route::get('kkbaruktp/{id}', 'AdminController@pdfktp')->name('kkbaruktp');
+	Route::get('/pdfkkbaru/{id}', 'AdminController@pdfkkbaru')->name('pdfkkbaru');
+
+
+
+Route::get('pemerintahan/Menumpangkk', 'AdminController@Menumpangkk')->name('admin.Menumpangkk');
+Route::get('KKMenumpangExport', 'AdminController@KKMenumpangExport')->name('KKMenumpangExport');
+Route::get('Menumpangkkktp/{id}', 'AdminController@pdfkkmenumpang')->name('downloadpdfkkmenumpang');
+
+
+
 
 	// Admin Pembangunan
 	Route::get('pembangunan/usaha', 'AdminController@usaha')->name('admin.usaha');

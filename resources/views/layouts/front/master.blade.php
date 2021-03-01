@@ -25,9 +25,9 @@
             </div>
             <div class="content">
               <div class="inner">
-                <h1>Kuala Samboja</h1>
-                <p>Kelurahan Kuala Samboja Adalah Itu Sudah<br />
-                Jangan Lupa Mampir Untuk membuat Surat Pengantar Kelurahan.</p>
+                <h1>SAPPO</h1>
+                <p>Sistem Administrasi Pelayanan Publik Online<br />
+                Jangan Lupa Mampir untuk membuat surat pengantar kelurahan.</p>
               </div>
             </div>
             <nav>
@@ -43,12 +43,12 @@
 
         <!-- Footer -->
           <footer id="footer">
-            <p class="copyright">&copy; Kuala Samboja 2020.</p>
+            <p class="copyright">&copy; Kuala Samboja 2021.</p>
             <ul class="icons">
                   <li><a href="#" class="icon brands fa-google"><span class="label">Twitter</span></a></li>
-                  <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                  <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                  <li><a href="#" class="icon brands fa-youtube"><span class="label">GitHub</span></a></li>
+                  <li><a href="https://web.facebook.com/kuala.samboja.5437" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                  <li><a href="https://www.instagram.com/kualasamboja/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                  <li><a href="https://www.youtube.com/channel/UC3_aZ2GRf16FYpJHt-FOWuQ/featured" class="icon brands fa-youtube"><span class="label">GitHub</span></a></li>
                 </ul>
           </footer>
       </div>

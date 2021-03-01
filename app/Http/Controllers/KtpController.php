@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\KtpExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 use App\User;
-use App\kategori;
 use App\ktp;
 use App\Admin;
 use Auth;
 use Illuminate\Support\Carbon;
+
 class KtpController extends Controller
 {
     /**
@@ -30,7 +33,7 @@ class KtpController extends Controller
     public function create(Request $request)
     {
         $this->validate($request,[
-            'id' => 'required',
+            'permohonan' => 'required',
             'nama' => 'required',
             'no_kk' => 'required',
             'no_nik' => 'required',
@@ -38,13 +41,13 @@ class KtpController extends Controller
             'no_rt' => 'required',
             'kode_pos' => 'required',
             'no_hp' => 'required',
-            
         ]);
+
         $ktp = ktp::create($request->all());
 
         $create = Carbon::parse($ktp->created_at)->isoformat('D MMMM Y');
         $ch = curl_init(); 
-    $data = array('chat_id' => '630495419', 'text' => "New😃\n\n Surat Permohonan kartu Tanda  Penduduk \n Nama : $ktp->nama\n KK : $ktp->no_kk\n \\ Nik : $ktp->no_nik\n\n Kuala Samboja $create");
+    $data = array('chat_id' => '630495419', 'text' => "New😃\n\n Surat Permohonan kartu Tanda Penduduk permohonan : $ktp->permohonan\n\n Nama : $ktp->nama\n KK : $ktp->no_kk\n \\ Nik : $ktp->no_nik\n\n Kuala Samboja $create");
     curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot1245434228:AAHxu65mWg1B0mVVzoOEhsZqURNnEgrEFHc/sendMessage");
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
